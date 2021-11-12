@@ -11,4 +11,3 @@
 
 
 //Index.html should have the alien walking with a header with the text "Alien"
-//
