@@ -8,6 +8,8 @@
     alien.src = "/images/alien/alienlwalk0.gif"
     document.body.appendChild(alien)
 
+    var newText = document.createTextNode()
+
 
 
 //Index.html should have the alien walking with a header with the text "Alien"
