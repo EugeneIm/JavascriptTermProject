@@ -18,14 +18,18 @@
             showAlien()
             console.log('text is alien')
         }
-        // if (text == 'walk')
-        // {
-        //     walk()
-        //     console.log('text is step')
-        // }
+        if (text == 'walk')
+        {
+            walk()
+            console.log('text is step')
+        }
         if (text == 'storage')
         {
             storageLink()
+        }
+        if (text == 'bye')
+        {
+            alienImage.style.visibility = 'none';
         }
     }
 
@@ -52,18 +56,31 @@
         //This just renders the alien onto the page. 
     }
 
+    timer = null
+    stepNumber = 0
+    
+    function step()
+    {
+        stepNumber++
+        stepNumber = stepNumber % 30
+        a.src = "images/alien/alienrwalk" + stepNumber + ".gif"
+        window.setInterval(step, 30)
+    }
+
+    //the alien is now walking but very choppily
 
     function walk()
+    {
+        step()
+        a.style.left = parseInt(a.style.left) + 10 + "px"
+    }
+
+    function stop()
     {
         
     }
 
 
-
-    function stepping()
-    {
-
-    }
 
 
 //Index.html should have the alien walking 
