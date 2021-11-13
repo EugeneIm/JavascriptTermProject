@@ -1,16 +1,21 @@
 
-    var h1Text = document.createElement("h1")
-    var fullText = document.createTextNode("HEADER PLACEHOLDER")
-    document.body.appendChild(h1Text)
-    h1Text.appendChild(fullText)
+    var inputText = document.createElement("input")
+    var fullText = document.createTextNode("inputText")
+    document.body.appendChild(inputText)
+    
+    
 
+    var submitButton = document.createElement("button")
+    document.body.appendChild(submitButton)
+
+
+    function showAlien()
+    {
     var alien = document.createElement("img")
-    alien.src = "/images/alien/alienlwalk0.gif"
+    alien.src = "./images/alien/alienlwalk0.gif"
     document.body.appendChild(alien)
-
-    var newText = document.createTextNode()
-
-
+    }
+    
 
 //Index.html should have the alien walking 
 //with a header with the text "Alien"
