@@ -31,3 +31,10 @@ button
     height: 120px;
     left: -100px;
 }
+
+#storage
+{
+    position: relative;
+    left: 52.5%;
+    top: 120px;
+}

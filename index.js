@@ -18,13 +18,30 @@
             showAlien()
             console.log('text is alien')
         }
-        if (text == 'walk')
+        // if (text == 'walk')
+        // {
+        //     walk()
+        //     console.log('text is step')
+        // }
+        if (text == 'storage')
         {
-            walk()
-            console.log('text is step')
+            storageLink()
         }
     }
 
+    function storageLink()
+    {
+        var storage = document.createElement("p")
+        storage.textContent = "Storage Link"
+        storage.id = "storage"
+        document.body.appendChild(storage)
+        document.querySelector('#storage').addEventListener("click", () => 
+        {
+            window.location.href = "storage.html";
+        })
+        //create a line of text called "Storage Link" which
+        //needs to be href'd to storage.html
+    }
 
     function showAlien()
     {
@@ -35,25 +52,20 @@
         //This just renders the alien onto the page. 
     }
 
-    alien = document.getElementById("a")
 
     function walk()
     {
-        stepping()
-        alien.style.left = parseInt(alien.style.left) + 1 + "px"
+        
     }
 
-    timer = null
-    stepNumber = 0
+
 
     function stepping()
     {
-        stepNumber++
-        stepNumber = stepNumber % 30
-        alien.src = "./images/alien/alienrwalk" + stepNumber + ".gif"
+
     }
 
-    
+
 //Index.html should have the alien walking 
 //while loop so that while the number of the image is less than 30
 //it starts to loop through the pictures so it makes it look like
