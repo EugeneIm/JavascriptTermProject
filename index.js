@@ -31,6 +31,10 @@
         {
             alienImage.style.visibility = 'none';
         }
+        if (text == 'stop')
+        {
+            stop()
+        }
     }
 
     function storageLink()
@@ -64,7 +68,7 @@
         stepNumber++
         stepNumber = stepNumber % 30
         a.src = "images/alien/alienrwalk" + stepNumber + ".gif"
-        window.setInterval(step, 30)
+        timer = window.setInterval(step, 100)
     }
 
     //the alien is now walking but very choppily
@@ -77,7 +81,8 @@
 
     function stop()
     {
-        
+        clearInterval(timer)
+        timer = null
     }
 
 
